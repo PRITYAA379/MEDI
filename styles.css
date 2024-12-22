@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: black;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.glowing-image {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    }
+}
+
+.talking-text {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #FFD700;
+    animation: talk 1s infinite;
+}
+
+@keyframes talk {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Product Details */
+.product-details {
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.product-details h1, .product-details h2 {
+    color: #FFD700;
+    text-align: center;
+}
+
+.product-details h3 {
+    color: #FFD700;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.product-details ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.product-details li {
+    margin: 5px 0;
+}
+
+/* Read Now Button */
+.read-now-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.read-now-button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.read-now-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    .glowing-image {
+        width: 100%;
+    }
+
+    .talking-text {
+        font-size: 1.5em;
+    }
+
+    .product-details {
+        padding: 15px;
+    }
+
+    .read-now-button {
+        width: 90%;
+        padding: 15px;
+    }
+}
